@@ -1,0 +1,18 @@
+---
+
+services:
+  nginxSingleContainer:
+    container_name: nginxSingleContainer
+    restart: unless-stopped
+    image: docker pull nginx:1.27.3-bookworm
+
+    ports:
+      - 8081:8081
+      - 8082:8082
+      - 80:80
+
+    volumes:
+      - ./site1/:/var/www/site1:Z
+      - ./site2/:/var/www/site2:Z
+      - ./nginxConf.d:/etc/nginx/nginx.conf:Z
+
