@@ -14,5 +14,5 @@ services:
     volumes:
       - ./site1/:/var/www/site1:Z
       - ./site2/:/var/www/site2:Z
-      - ./nginxConf.d:/etc/nginx/nginx.conf.d:Z
+      - ./nginxConf.d:/etc/nginx/conf.d:Z
 
